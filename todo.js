@@ -24,7 +24,6 @@ renderToDos();
 
 function addToDo(){
     var newToDo    = inputElement.value;
-    console.log(newToDo);
     todos.push(newToDo);
     inputElement.value  ='';
     renderToDos();
