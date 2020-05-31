@@ -43,7 +43,8 @@ li {
     margin-top: 10px;
 }
 .app{
-	width: 300px;
+    width: 300px;
+    margin: auto;
 }
 .app h2{
 	text-align: center;
