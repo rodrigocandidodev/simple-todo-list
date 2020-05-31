@@ -1,0 +1,39 @@
+body{
+	background-color: #f2f2f2;
+    font-family: sans-serif;
+}
+.btn {
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.btn-first{
+    background-color: rgba(8, 14, 51,1);
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.5);
+    color: #fff;
+    font-weight: 700;
+}
+input[type=text]{
+	border-radius: 8px;
+    border: none;
+    height: 22px;
+    outline: none;
+    padding-left: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0,.3);
+}
+button{
+    margin-bottom: 20px;
+}
+.btn-first:hover{
+	box-shadow: 0 5px 10px rgba(0, 0, 0,.3);
+}
+
+.app{
+	width: 300px;
+}
+.app h2{
+	text-align: center;
+}
