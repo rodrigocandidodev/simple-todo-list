@@ -5,6 +5,7 @@ var buttonElement   = document.querySelector('#app button');
 var todos = [];
 
 function renderToDos(){
+    listElement.innerHTML = "";
     for(todo of todos){
         var todoElement     = document.createElement('li');
         var todoText        = document.createTextNode(todo);
@@ -20,3 +21,12 @@ function renderToDos(){
     }
 }
 renderToDos();
+
+function addToDo(){
+    var newToDo    = inputElement.value;
+    console.log(newToDo);
+    todos.push(newToDo);
+    inputElement.value  ='';
+    renderToDos();
+}
+buttonElement.setAttribute('onclick','addToDo()');
