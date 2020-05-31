@@ -15,9 +15,11 @@ function renderToDos(){
 
         linkElement.setAttribute('href','#');
         linkElement.appendChild(linkElementText);
-
+        
         todoElement.appendChild(todoText);
         listElement.appendChild(todoElement);
+        todoElement.appendChild(linkElement);
+
     }
 }
 renderToDos();
