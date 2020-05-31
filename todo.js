@@ -13,7 +13,10 @@ function renderToDos(){
         var linkElement     = document.createElement('a');
         var linkElementText = document.createTextNode('Delete');
 
+        var pos = todos.indexOf(todo);
+
         linkElement.setAttribute('href','#');
+        linkElement.setAttribute('onclick','deleteToDo('+ pos +')');
         linkElement.appendChild(linkElementText);
         
         todoElement.appendChild(todoText);
@@ -31,3 +34,8 @@ function addToDo(){
     renderToDos();
 }
 buttonElement.setAttribute('onclick','addToDo()');
+
+function deleteToDo(position){
+    todos.splice(position,1);
+    renderToDos();
+}
