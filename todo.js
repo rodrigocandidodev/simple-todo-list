@@ -2,7 +2,7 @@ var listElement     = document.querySelector('#app ul');
 var inputElement    = document.querySelector('input[type=text]');
 var buttonElement   = document.querySelector('#app button');
 
-var todos = [];
+var todos = JSON.parse(localStorage.getItem('simple_todo_app_storage')) || [];
 
 function renderToDos(){
     listElement.innerHTML = "";
@@ -31,11 +31,16 @@ function addToDo(){
     var newToDo    = inputElement.value;
     todos.push(newToDo);
     inputElement.value  ='';
+    saveInStorage();
     renderToDos();
 }
 buttonElement.setAttribute('onclick','addToDo()');
 
 function deleteToDo(position){
     todos.splice(position,1);
+    saveInStorage();
     renderToDos();
+}
+function saveInStorage(){
+    localStorage.setItem('simple_todo_app_storage', JSON.stringify(todos));
 }
